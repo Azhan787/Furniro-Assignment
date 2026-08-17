@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Blog - Furniro</title>
+  <link rel="stylesheet" href="./blog.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-container">
+      <div class="logo">
+        <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="logo-img" onerror="this.style.display='none'">
+        <span class="logo-text">Furniro</span>
+      </div>
+
+      <nav class="nav-links" id="navLinks">
+        <a href="./index.html">Home</a>
+        <a href="./shop.html">Shop</a>
+        <a href="./product-detail.html">About</a>
+        <a href="./contact.html">Contact</a>
+      </nav>
+
+      <div class="nav-icons">
+        <a href="#" aria-label="User Profile"><i class="fa-regular fa-user"></i></a>
+        <a href="#" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
+        <a href="#" aria-label="Shopping Cart"><i class="fa-solid fa-cart-shopping"></i></a>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle Navigation Menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO / BANNER -->
+  <section class="banner">
+    <img src="./images/blogs.png" alt="Blog Banner" class="banner-img">
+    <div class="banner-content">
+      <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Mark" class="banner-logo" onerror="this.style.display='none'">
+      <h1>Blog</h1>
+      <div class="breadcrumb">
+        <a href="./index.html">Home</a> &gt; <span>Blog</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-container">
+    <div class="content-wrapper">
+      
+      <!-- BLOG POSTS AREA -->
+      <section class="blog-posts-section">
+        <div id="noPostsMessage" class="no-posts-msg" style="display: none;">No posts found.</div>
+        
+        <div class="blog-posts-list" id="blogPostsList">
+          
+          <!-- Post 1 -->
+          <article class="post-card" data-title="Going all-in with millennial design">
+            <div class="post-img-container">
+              <img src="./images/blog.png" alt="Going all-in with millennial design" class="post-img">
+            </div>
+            <div class="post-meta">
+              <span><i class="fa-solid fa-user"></i> Admin</span>
+              <span><i class="fa-solid fa-calendar"></i> 14 Oct 2023</span>
+              <span><i class="fa-solid fa-tag"></i> Wood</span>
+            </div>
+            <h2 class="post-title">Going all-in with millennial design</h2>
+            <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet.</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </article>
+
+          <!-- Post 2 -->
+          <article class="post-card" data-title="Exploring new ways of decorating">
+            <div class="post-img-container">
+              <img src="./images/blog1.png" alt="Exploring new ways of decorating" class="post-img">
+            </div>
+            <div class="post-meta">
+              <span><i class="fa-solid fa-user"></i> Admin</span>
+              <span><i class="fa-solid fa-calendar"></i> 14 Oct 2023</span>
+              <span><i class="fa-solid fa-tag"></i> Handmade</span>
+            </div>
+            <h2 class="post-title">Exploring new ways of decorating</h2>
+            <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet.</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </article>
+
+          <!-- Post 3 -->
+          <article class="post-card" data-title="Handmade pieces that took time to make">
+            <div class="post-img-container">
+              <img src="./images/blog2.png" alt="Handmade pieces that took time to make" class="post-img">
+            </div>
+            <div class="post-meta">
+              <span><i class="fa-solid fa-user"></i> Admin</span>
+              <span><i class="fa-solid fa-calendar"></i> 14 Oct 2023</span>
+              <span><i class="fa-solid fa-tag"></i> Wood</span>
+            </div>
+            <h2 class="post-title">Handmade pieces that took time to make</h2>
+            <p class="post-excerpt">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Mus mauris vitae ultricies leo integer malesuada nunc. In nulla posuere sollicitudin aliquam ultrices. Morbi blandit cursus risus at ultrices mi tempus imperdiet.</p>
+            <a href="#" class="read-more-btn">Read more</a>
+          </article>
+
+        </div>
+
+        <!-- PAGINATION -->
+        <div class="pagination">
+          <button class="page-btn active">1</button>
+          <button class="page-btn">2</button>
+          <button class="page-btn">3</button>
+          <button class="page-btn next-btn">Next</button>
+        </div>
+      </section>
+
+      <!-- SIDEBAR -->
+      <aside class="sidebar">
+        
+        <!-- Search -->
+        <div class="sidebar-widget search-widget">
+          <div class="search-input-wrapper">
+            <input type="text" id="searchInput" placeholder="Search..." aria-label="Search posts">
+            <button type="button" aria-label="Search Submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+          </div>
+        </div>
+
+        <!-- Categories -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Categories</h3>
+          <ul class="categories-list">
+            <li><span>Crafts</span><span class="count">2</span></li>
+            <li><span>Design</span><span class="count">8</span></li>
+            <li><span>Handmade</span><span class="count">7</span></li>
+            <li><span>Interior</span><span class="count">1</span></li>
+            <li><span>Wood</span><span class="count">6</span></li>
+          </ul>
+        </div>
+
+        <!-- Recent Posts -->
+        <div class="sidebar-widget">
+          <h3 class="widget-title">Recent Posts</h3>
+          <div class="recent-posts-list">
+            
+            <div class="recent-post-item">
+              <img src="./images/blog3.png" alt="Going all-in with millennial design" class="recent-post-img">
+              <div class="recent-post-info">
+                <h4>Going all-in with millennial design</h4>
+                <span class="recent-post-date">03 Aug 2023</span>
+              </div>
+            </div>
+
+            <div class="recent-post-item">
+              <img src="./images/blog4.png" alt="Exploring new ways of decorating" class="recent-post-img">
+              <div class="recent-post-info">
+                <h4>Exploring new ways of decorating</h4>
+                <span class="recent-post-date">03 Aug 2023</span>
+              </div>
+            </div>
+
+            <div class="recent-post-item">
+              <img src="./images/blog5.png" alt="Handmade pieces that took time to make" class="recent-post-img">
+              <div class="recent-post-info">
+                <h4>Handmade pieces that took time to make</h4>
+                <span class="recent-post-date">03 Aug 2023</span>
+              </div>
+            </div>
+
+            <div class="recent-post-item">
+              <img src="./images/blog6.png" alt="Modern home office design" class="recent-post-img">
+              <div class="recent-post-info">
+                <h4>Modern home office design</h4>
+                <span class="recent-post-date">03 Aug 2023</span>
+              </div>
+            </div>
+
+            <div class="recent-post-item">
+              <img src="./images/blog7.png" alt="Colorful office redesign" class="recent-post-img">
+              <div class="recent-post-info">
+                <h4>Colorful office redesign</h4>
+                <span class="recent-post-date">03 Aug 2023</span>
+              </div>
+            </div>
+
+          </div>
+        </div>
+
+      </aside>
+
+    </div>
+  </main>
+
+  <!-- FEATURE SECTION -->
+  <section class="features-bar">
+    <div class="features-container">
+      <div class="feature-item">
+        <i class="fa-solid fa-trophy"></i>
+        <div class="feature-text">
+          <h4>High Quality</h4>
+          <p>crafted from top materials</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-circle-check"></i>
+        <div class="feature-text">
+          <h4>Warranty Protection</h4>
+          <p>Over 2 years</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-hand-holding-box"></i>
+        <div class="feature-text">
+          <h4>Free Shipping</h4>
+          <p>Order over 150 $</p>
+        </div>
+      </div>
+      <div class="feature-item">
+        <i class="fa-solid fa-headset"></i>
+        <div class="feature-text">
+          <h4>24 / 7 Support</h4>
+          <p>Dedicated support</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="footer-container">
+      <div class="footer-col footer-brand">
+        <h3>Furniro.</h3>
+        <p>400 University Drive Suite 200 Coral Gables,<br>FL 33134 USA</p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Links</h4>
+        <ul>
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./product-detail.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Help</h4>
+        <ul>
+          <li><a href="#">Payment Options</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4>Newsletter</h4>
+        <form id="newsletterForm" class="newsletter-form" novalidate>
+          <div class="input-group">
+            <input type="email" id="newsletterEmail" placeholder="Enter Your Email Address" required>
+            <button type="submit">SUBSCRIBE</button>
+          </div>
+          <span id="newsletterMessage" class="newsletter-msg"></span>
+        </form>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>2023 furniro. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="./blog.js"></script>
+</body>
+</html>

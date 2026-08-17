@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Checkout</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./checkout.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="logo-img">
+                <span class="logo-text">Furniro</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link">Shop</a>
+                <a href="./product-detail.html" class="nav-link">About</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="userBtn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <a href="./cart.html" class="icon-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Mobile Menu">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav" id="mobileNav">
+            <a href="./index.html" class="mobile-nav-link">Home</a>
+            <a href="./shop.html" class="mobile-nav-link">Shop</a>
+            <a href="./product-detail.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- SEARCH MODAL -->
+    <div class="search-modal" id="searchModal">
+        <div class="search-box">
+            <input type="text" id="modalSearchInput" placeholder="Search products...">
+            <button id="closeSearchBtn" aria-label="Close Search"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO BANNER -->
+        <section class="shop-hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="hero-logo-img">
+                <h1 class="hero-title">Checkout</h1>
+                <div class="breadcrumb">
+                    <a href="./index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">&gt;</span>
+                    <span class="breadcrumb-current">Checkout</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CHECKOUT SECTION -->
+        <section class="checkout-section">
+            <div class="container">
+                
+                <!-- ALERTS -->
+                <div class="alert-box alert-success" id="successAlert" style="display: none;">
+                    <h3>Order placed successfully!</h3>
+                    <p>Thank you for your order. We have received your purchase details.</p>
+                    <a href="./shop.html" class="btn-return-shop">Continue Shopping</a>
+                </div>
+
+                <div class="alert-box alert-empty" id="emptyCartAlert" style="display: none;">
+                    <h3>Your cart is empty.</h3>
+                    <p>Please add products to your cart before proceeding to checkout.</p>
+                    <a href="./shop.html" class="btn-return-shop">Continue Shopping</a>
+                </div>
+
+                <!-- CHECKOUT FORM -->
+                <form id="checkoutForm" class="checkout-layout" novalidate>
+                    
+                    <!-- BILLING DETAILS -->
+                    <div class="billing-details">
+                        <h2 class="section-heading">Billing details</h2>
+
+                        <div class="form-row name-row">
+                            <div class="form-group">
+                                <label for="firstName">First Name</label>
+                                <input type="text" id="firstName" name="firstName" required>
+                                <span class="error-text" id="firstNameError"></span>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName">Last Name</label>
+                                <input type="text" id="lastName" name="lastName" required>
+                                <span class="error-text" id="lastNameError"></span>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="companyName">Company Name (Optional)</label>
+                            <input type="text" id="companyName" name="companyName">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="country">Country / Region</label>
+                            <select id="country" name="country" required>
+                                <option value="Sri Lanka" selected>Sri Lanka</option>
+                                <option value="India">India</option>
+                                <option value="Pakistan">Pakistan</option>
+                                <option value="United States">United States</option>
+                            </select>
+                            <span class="error-text" id="countryError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="streetAddress">Street address</label>
+                            <input type="text" id="streetAddress" name="streetAddress" required>
+                            <span class="error-text" id="streetAddressError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="townCity">Town / City</label>
+                            <input type="text" id="townCity" name="townCity" required>
+                            <span class="error-text" id="townCityError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="province">Province</label>
+                            <select id="province" name="province" required>
+                                <option value="Western Province" selected>Western Province</option>
+                                <option value="Central Province">Central Province</option>
+                                <option value="Southern Province">Southern Province</option>
+                                <option value="Northern Province">Northern Province</option>
+                            </select>
+                            <span class="error-text" id="provinceError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="zipCode">ZIP code</label>
+                            <input type="text" id="zipCode" name="zipCode" required>
+                            <span class="error-text" id="zipCodeError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="phone">Phone</label>
+                            <input type="tel" id="phone" name="phone" required>
+                            <span class="error-text" id="phoneError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="email">Email address</label>
+                            <input type="email" id="email" name="email" required>
+                            <span class="error-text" id="emailError"></span>
+                        </div>
+
+                        <div class="form-group">
+                            <input type="text" id="additionalInfo" name="additionalInfo" placeholder="Additional information">
+                        </div>
+                    </div>
+
+                    <!-- ORDER SUMMARY -->
+                    <div class="order-summary-box">
+                        <div class="summary-table">
+                            <div class="summary-header">
+                                <span class="header-product">Product</span>
+                                <span class="header-subtotal">Subtotal</span>
+                            </div>
+
+                            <div class="summary-items" id="summaryItems"></div>
+
+                            <div class="summary-row subtotal-row">
+                                <span class="label">Subtotal</span>
+                                <span class="value" id="orderSubtotal">Rs. 0.00</span>
+                            </div>
+
+                            <div class="summary-row total-row">
+                                <span class="label">Total</span>
+                                <span class="value total-val" id="orderTotal">Rs. 0.00</span>
+                            </div>
+                        </div>
+
+                        <hr class="summary-divider">
+
+                        <!-- PAYMENT SECTION -->
+                        <div class="payment-section">
+                            <div class="payment-option">
+                                <label class="radio-container">
+                                    <input type="radio" name="paymentMethod" value="bank" checked>
+                                    <span class="radio-mark"></span>
+                                    <span class="payment-title dark-title">Direct Bank Transfer</span>
+                                </label>
+                                <p class="payment-description" id="bankDesc">
+                                    Make your payment directly into our bank account. Please use your Order ID as the payment reference. Your order won't be shipped until the funds have cleared in our account.
+                                </p>
+                            </div>
+
+                            <div class="payment-option">
+                                <label class="radio-container">
+                                    <input type="radio" name="paymentMethod" value="bank2">
+                                    <span class="radio-mark"></span>
+                                    <span class="payment-title muted-title">Direct Bank Transfer</span>
+                                </label>
+                            </div>
+
+                            <div class="payment-option">
+                                <label class="radio-container">
+                                    <input type="radio" name="paymentMethod" value="cod">
+                                    <span class="radio-mark"></span>
+                                    <span class="payment-title muted-title">Cash On Delivery</span>
+                                </label>
+                            </div>
+
+                            <p class="privacy-notice">
+                                Your personal data will be used to support your experience throughout this website, to manage access to your account, and for other purposes described in our <a href="#" class="privacy-link">privacy policy</a>.
+                            </p>
+
+                            <div class="place-order-wrapper">
+                                <button type="submit" class="btn-place-order">Place order</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
+            <div class="container features-container">
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="feature-info">
+                        <h3>High Quality</h3>
+                        <p>crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="feature-info">
+                        <h3>Warranty Protection</h3>
+                        <p>Over 2 years</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <div class="feature-info">
+                        <h3>Free Shipping</h3>
+                        <p>Order over $150</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-info">
+                        <h3>24 / 7 Support</h3>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <h2 class="footer-logo">Furniro.</h2>
+                <address class="footer-address">
+                    400 University Drive Suite 200 Coral Gables,<br>
+                    FL 33134 USA
+                </address>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./product-detail.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Help</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-col">
+                <h4 class="footer-heading">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <div class="input-wrapper">
+                        <input type="email" id="newsletterEmail" placeholder="Enter Your Email Address" required>
+                        <span class="error-msg" id="newsletterError"></span>
+                    </div>
+                    <button type="submit" class="newsletter-submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2026 Furniro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./checkout.js"></script>
+</body>
+</html>

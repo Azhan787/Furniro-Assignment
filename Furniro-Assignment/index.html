@@ -1,0 +1,407 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Furniro - Modern Furniture Store</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" />
+</head>
+<body>
+
+  <header class="header">
+    <div class="container nav-container">
+      <a href="./index.html" class="logo">
+        <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="logo-icon" />
+        <span>Furniro</span>
+      </a>
+
+      <nav class="nav-menu" id="nav-menu">
+        <ul class="nav-list">
+          <li><a href="./index.html" class="nav-link active">Home</a></li>
+          <li><a href="./shop.html" class="nav-link">Shop</a></li>
+          <li><a href="./product-detail.html" class="nav-link">About</a></li>
+          <li><a href="./contact.html" class="nav-link">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#account" class="action-icon" aria-label="User Account"><i class="fa-regular fa-user"></i></a>
+        <a href="#search" class="action-icon" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></a>
+        <a href="#wishlist" class="action-icon" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></a>
+        <a href="./cart.html" class="action-icon cart-icon-wrapper" aria-label="Shopping Cart">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <span class="cart-badge" id="cart-count">0</span>
+        </a>
+        <button class="hamburger" id="hamburger" aria-label="Toggle menu" aria-expanded="false">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-bg">
+        <img src="./images/home_bg.png" alt="Living room furniture" />
+      </div>
+      <div class="container hero-container">
+        <div class="hero-card">
+          <span class="sub-heading">New Arrival</span>
+          <h1 class="hero-title">Discover Our<br />New Collection</h1>
+          <p class="hero-desc">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut elit tellus, luctus nec ullamcorper mattis.
+          </p>
+          <a href="./shop.html" class="btn btn-primary">BUY NOW</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section range-section" id="range">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Browse The Range</h2>
+          <p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        </div>
+        <div class="range-grid">
+          <div class="range-card">
+            <div class="range-img-wrapper">
+              <img src="./images/home_card.png" alt="Dining Room Range" />
+            </div>
+            <h3 class="range-name">Dining</h3>
+          </div>
+          <div class="range-card">
+            <div class="range-img-wrapper">
+              <img src="./images/home_card2.png" alt="Living Room Range" />
+            </div>
+            <h3 class="range-name">Living</h3>
+          </div>
+          <div class="range-card">
+            <div class="range-img-wrapper">
+              <img src="./images/home_card3.png" alt="Bedroom Range" />
+            </div>
+            <h3 class="range-name">Bedroom</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section products-section" id="shop">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title">Our Products</h2>
+        </div>
+        <div class="products-grid" id="products-grid">
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="badge badge-discount">-30%</span>
+              <img src="./images/cart1.png" alt="Syltherine cafe chair" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Syltherine</h3>
+              <p class="product-desc">Stylish cafe chair</p>
+              <div class="product-price">
+                <span class="current-price">Rp 2.500.000</span>
+                <span class="old-price">Rp 3.500.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="./images/cart2.jpg" alt="Leviosa cafe chair" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Leviosa</h3>
+              <p class="product-desc">Stylish cafe chair</p>
+              <div class="product-price">
+                <span class="current-price">Rp 2.500.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="badge badge-discount">-50%</span>
+              <img src="./images/cart3.png" alt="Lolito luxury big sofa" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Lolito</h3>
+              <p class="product-desc">Luxury big sofa</p>
+              <div class="product-price">
+                <span class="current-price">Rp 7.000.000</span>
+                <span class="old-price">Rp 14.000.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="badge badge-new">New</span>
+              <img src="./images/cart4.png" alt="Respira outdoor table and stool" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Respira</h3>
+              <p class="product-desc">Outdoor bar table and stool</p>
+              <div class="product-price">
+                <span class="current-price">Rp 500.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <img src="./images/cart5.png" alt="Grifo night lamp" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Grifo</h3>
+              <p class="product-desc">Night lamp</p>
+              <div class="product-price">
+                <span class="current-price">Rp 1.500.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="badge badge-new">New</span>
+              <img src="./images/cart6.png" alt="Muggo small mug" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Muggo</h3>
+              <p class="product-desc">Small mug</p>
+              <div class="product-price">
+                <span class="current-price">Rp 150.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="badge badge-discount">-50%</span>
+              <img src="./images/cart7.png" alt="Pingky cute bed set" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Pingky</h3>
+              <p class="product-desc">Cute bed set</p>
+              <div class="product-price">
+                <span class="current-price">Rp 7.000.000</span>
+                <span class="old-price">Rp 14.000.000</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card">
+            <div class="product-img-wrapper">
+              <span class="badge badge-new">New</span>
+              <img src="./images/cart8.png" alt="Potty minimalist flower pot" />
+              <div class="product-overlay">
+                <button class="btn btn-secondary add-to-cart-btn">Add to cart</button>
+                <div class="overlay-actions">
+                  <button class="action-btn share-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                  <button class="action-btn compare-btn"><i class="fa-solid fa-arrow-right-arrow-left"></i> Compare</button>
+                  <button class="action-btn like-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                </div>
+              </div>
+            </div>
+            <div class="product-info">
+              <h3 class="product-title">Potty</h3>
+              <p class="product-desc">Minimalist flower pot</p>
+              <div class="product-price">
+                <span class="current-price">Rp 500.000</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+        <div class="products-more">
+          <button class="btn btn-outline" id="show-more-btn">Show More</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section rooms-section" id="about">
+      <div class="container rooms-container">
+        <div class="rooms-content">
+          <h2 class="rooms-title">50+ Beautiful rooms inspiration</h2>
+          <p class="rooms-desc">
+            Our designer already made a lot of beautiful prototype of rooms that inspire you
+          </p>
+          <a href="./shop.html" class="btn btn-primary">Explore More</a>
+        </div>
+
+        <div class="rooms-slider-wrapper">
+          <div class="rooms-slider" id="rooms-slider">
+            <div class="slide active">
+              <img src="./images/grid1.png" alt="Inner Peace Bedroom Prototype" />
+              <div class="slide-card">
+                <span class="slide-subtitle">01 — Bed Room</span>
+                <h3 class="slide-title">Inner Peace</h3>
+                <a href="#" class="slide-btn" aria-label="View room details"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./images/grid2.png" alt="Modern Dining Prototype" />
+              <div class="slide-card">
+                <span class="slide-subtitle">02 — Dining Room</span>
+                <h3 class="slide-title">Modern Light</h3>
+                <a href="#" class="slide-btn" aria-label="View room details"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+            <div class="slide">
+              <img src="./images/grid3.png" alt="Minimalist Living Prototype" />
+              <div class="slide-card">
+                <span class="slide-subtitle">03 — Living Room</span>
+                <h3 class="slide-title">Cozy Minimalist</h3>
+                <a href="#" class="slide-btn" aria-label="View room details"><i class="fa-solid fa-arrow-right"></i></a>
+              </div>
+            </div>
+          </div>
+
+          <button class="slider-btn prev-btn" id="prev-slide" aria-label="Previous slide"><i class="fa-solid fa-chevron-left"></i></button>
+          <button class="slider-btn next-btn" id="next-slide" aria-label="Next slide"><i class="fa-solid fa-chevron-right"></i></button>
+
+          <div class="slider-dots" id="slider-dots">
+            <span class="dot active" data-slide="0"></span>
+            <span class="dot" data-slide="1"></span>
+            <span class="dot" data-slide="2"></span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section gallery-section">
+      <div class="section-header center">
+        <p class="section-subtitle">Share your setup with</p>
+        <h2 class="section-title">#FurniroFurniture</h2>
+      </div>
+
+      <div class="gallery-container">
+        <div class="gallery-column">
+          <div class="gallery-item"><img src="./images/Rectangle 36.png" alt="Furniro furniture setup 1" /></div>
+          <div class="gallery-item"><img src="./images/Rectangle 37.png" alt="Furniro furniture setup 2" /></div>
+        </div>
+        <div class="gallery-column">
+          <div class="gallery-item"><img src="./images/Rectangle 38.png" alt="Furniro furniture setup 3" /></div>
+          <div class="gallery-item"><img src="./images/Rectangle 39.png" alt="Furniro furniture setup 4" /></div>
+        </div>
+        <div class="gallery-column center-column">
+          <div class="gallery-item"><img src="./images/Rectangle 40.png" alt="Furniro furniture setup 5" /></div>
+        </div>
+        <div class="gallery-column">
+          <div class="gallery-item"><img src="./images/Rectangle 41.png" alt="Furniro furniture setup 6" /></div>
+          <div class="gallery-item"><img src="./images/Rectangle 43.png" alt="Furniro furniture setup 7" /></div>
+        </div>
+        <div class="gallery-column">
+          <div class="gallery-item"><img src="./images/Rectangle 44.png" alt="Furniro furniture setup 8" /></div>
+          <div class="gallery-item"><img src="./images/Rectangle 45.png" alt="Furniro furniture setup 8" /></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-container">
+      <div class="footer-col brand-col">
+        <h3 class="footer-logo">Furniro.</h3>
+        <address class="footer-address">
+          400 University Drive Suite 200 Coral Gables,<br />FL 33134 USA
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Links</h4>
+        <ul class="footer-links">
+          <li><a href="./index.html">Home</a></li>
+          <li><a href="./shop.html">Shop</a></li>
+          <li><a href="./product-detail.html">About</a></li>
+          <li><a href="./contact.html">Contact</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4 class="footer-title">Help</h4>
+        <ul class="footer-links">
+          <li><a href="#">Payment Options</a></li>
+          <li><a href="#">Returns</a></li>
+          <li><a href="#">Privacy Policies</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col newsletter-col">
+        <h4 class="footer-title">Newsletter</h4>
+        <form class="newsletter-form" id="newsletter-form">
+          <input type="email" id="newsletter-email" placeholder="Enter Your Email Address" required />
+          <button type="submit" class="newsletter-btn">SUBSCRIBE</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container footer-bottom">
+      <p class="copyright">&copy; 2023 Furniro. All rights reserved</p>
+    </div>
+  </footer>
+
+  <script src="./app.js"></script>
+</body>
+</html>

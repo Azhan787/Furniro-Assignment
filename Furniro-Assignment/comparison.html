@@ -1,0 +1,392 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Product Comparison</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="./comparison.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="logo-img" onerror="this.remove();">
+                <span class="logo-text">Furniro</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link">Shop</a>
+                <a href="./product-detail.html" class="nav-link">About</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="userBtn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <a href="./cart.html" class="icon-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Menu" aria-expanded="false" aria-controls="mobileNav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Menu -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" aria-hidden="true">
+            <a href="./index.html" class="mobile-nav-link">Home</a>
+            <a href="./shop.html" class="mobile-nav-link">Shop</a>
+            <a href="./product-detail.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main>
+        <!-- HERO / BANNER SECTION -->
+        <section class="hero-banner">
+            <img src="./images/pro_com.png" alt="Product Comparison" class="hero-bg-img">
+            <div class="hero-content">
+                <div class="hero-logo-wrapper">
+                    <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="hero-logo-img" onerror="this.remove();">
+                </div>
+                <h1 class="hero-title">Product Comparison</h1>
+                <div class="breadcrumb">
+                    <a href="./index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">&gt;</span>
+                    <span class="breadcrumb-current">Comparison</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- PRODUCT SELECTION SECTION -->
+        <section class="product-selection-section">
+            <div class="container selection-container">
+
+                <!-- COLUMN 1: GO TO PRODUCT PAGE -->
+                <div class="selection-col intro-col">
+                    <h2 class="intro-heading">Go to Product page for more Products</h2>
+                    <a href="./shop.html" class="view-more-link">View More</a>
+                </div>
+
+                <!-- COLUMN 2: PRODUCT 1 -->
+                <div class="selection-col product-card">
+                    <div class="product-img-box">
+                        <img src="./images/Outdoor sofa set 1.png" alt="Asgaard sofa" class="product-img">
+                    </div>
+                    <h3 class="product-name">Asgaard Sofa</h3>
+                    <p class="product-price">Rs. 250,000.00</p>
+                    <div class="product-rating">
+                        <span class="rating-num">4.7</span>
+                        <div class="stars" aria-hidden="true">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <span class="rating-divider">|</span>
+                        <span class="review-count">204 Review</span>
+                    </div>
+                </div>
+
+                <!-- COLUMN 3: PRODUCT 2 -->
+                <div class="selection-col product-card">
+                    <div class="product-img-box">
+                        <img src="./images/Outdoor sofa set 1.png" alt="Outdoor Sofa Set" class="product-img">
+                    </div>
+                    <h3 class="product-name">Outdoor Sofa Set</h3>
+                    <p class="product-price">Rs. 224,000.00</p>
+                    <div class="product-rating">
+                        <span class="rating-num">4.2</span>
+                        <div class="stars" aria-hidden="true">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-regular fa-star"></i>
+                        </div>
+                        <span class="rating-divider">|</span>
+                        <span class="review-count">145 Review</span>
+                    </div>
+                </div>
+
+                <!-- COLUMN 4: ADD A PRODUCT -->
+                <div class="selection-col add-product-col">
+                    <h3 class="add-title">Add A Product</h3>
+                    <div class="select-wrapper">
+                        <select id="productSelect" class="product-select" aria-label="Choose a Product">
+                            <option value="" disabled selected>Choose a Product</option>
+                            <option value="asgaard">Asgaard Sofa</option>
+                            <option value="outdoor">Outdoor Sofa Set</option>
+                            <option value="syltherine">Syltherine</option>
+                            <option value="leviosa">Leviosa</option>
+                            <option value="lolito">Lolito</option>
+                            <option value="respira">Respira</option>
+                        </select>
+                        <i class="fa-solid fa-chevron-down select-arrow" aria-hidden="true"></i>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- PRODUCT COMPARISON TABLE -->
+        <section class="comparison-table-section">
+            <div class="container">
+                <div class="table-scroll-wrapper">
+                    <table class="comparison-table">
+                        <colgroup>
+                            <col class="col-features">
+                            <col class="col-product1">
+                            <col class="col-product2">
+                        </colgroup>
+
+                        <!-- GENERAL SECTION -->
+                        <tbody>
+                            <tr class="section-header-row">
+                                <td colspan="3"><h2>General</h2></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Sales Package</td>
+                                <td>1 sectional sofa</td>
+                                <td>1 Three Seater, 2 Single Seater</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Model Number</td>
+                                <td>TFCBURLGRL6RSH</td>
+                                <td>DTUBLIGRL6SBS</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Secondary Material</td>
+                                <td>Solid Wood</td>
+                                <td>Solid Wood</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Configuration</td>
+                                <td>L-shaped</td>
+                                <td>L-shaped</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Upholstery Material</td>
+                                <td>Fabric + Cotton</td>
+                                <td>Fabric + Cotton</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Upholstery Color</td>
+                                <td>Bright Grey &amp; Lion</td>
+                                <td>Bright Grey &amp; Lion</td>
+                            </tr>
+                        </tbody>
+
+                        <!-- PRODUCT SECTION -->
+                        <tbody>
+                            <tr class="section-header-row">
+                                <td colspan="3"><h2>Product</h2></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Filling Material</td>
+                                <td>Foam</td>
+                                <td>Matte</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Finish Type</td>
+                                <td>Bright Grey &amp; Lion</td>
+                                <td>Bright Grey &amp; Lion</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Adjustable Headrest</td>
+                                <td>No</td>
+                                <td>Yes</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Maximum Load Capacity</td>
+                                <td>280 KG</td>
+                                <td>300 KG</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Origin of Manufacture</td>
+                                <td>India</td>
+                                <td>India</td>
+                            </tr>
+                        </tbody>
+
+                        <!-- DIMENSIONS SECTION -->
+                        <tbody>
+                            <tr class="section-header-row">
+                                <td colspan="3"><h2>Dimensions</h2></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Width</td>
+                                <td>265.32 cm</td>
+                                <td>265.32 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Height</td>
+                                <td>76 cm</td>
+                                <td>76 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Depth</td>
+                                <td>167.76 cm</td>
+                                <td>167.76 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Weight</td>
+                                <td>45 KG</td>
+                                <td>65 KG</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Seat Height</td>
+                                <td>41.52 cm</td>
+                                <td>41.52 cm</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Leg Height</td>
+                                <td>5.46 cm</td>
+                                <td>5.46 cm</td>
+                            </tr>
+                        </tbody>
+
+                        <!-- WARRANTY SECTION -->
+                        <tbody>
+                            <tr class="section-header-row">
+                                <td colspan="3"><h2>Warranty</h2></td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Warranty Summary</td>
+                                <td>1 Year Manufacturing Warranty</td>
+                                <td>1.2 Year Manufacturing Warranty</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Warranty Service Type</td>
+                                <td>For warranty claims or any product related issues, email operations@trevifurniture.com</td>
+                                <td>For warranty claims or any product related issues, email support@xyz.com</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Covered in Warranty</td>
+                                <td>Warranty against manufacturing defects</td>
+                                <td>Warranty of the product is limited to manufacturing defects only</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Not Covered in Warranty</td>
+                                <td>The warranty does not cover damages due to usage of the product beyond its intended use, and wear &amp; tear in the natural course of product usage.</td>
+                                <td>The warranty does not cover damages due to usage of the product beyond its intended use, and wear &amp; tear in the natural course of product usage.</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-label">Domestic Warranty</td>
+                                <td>1 Year</td>
+                                <td>3 Months</td>
+                            </tr>
+                            <!-- ADD TO CART BUTTON ROW -->
+                            <tr class="action-row">
+                                <td></td>
+                                <td>
+                                    <button type="button" class="btn-add-cart" id="btnCartProduct1">Add To Cart</button>
+                                    <div class="cart-msg" id="msgProduct1" role="status"></div>
+                                </td>
+                                <td>
+                                    <button type="button" class="btn-add-cart" id="btnCartProduct2">Add To Cart</button>
+                                    <div class="cart-msg" id="msgProduct2" role="status"></div>
+                                </td>
+                            </tr>
+                        </tbody>
+
+                    </table>
+                </div>
+            </div>
+        </section>
+
+        <!-- FEATURES / BENEFITS SECTION -->
+        <section class="features-section">
+            <div class="container features-container">
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="feature-info">
+                        <h3>High Quality</h3>
+                        <p>Crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="feature-info">
+                        <h3>Warranty Protection</h3>
+                        <p>Over 2 years</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-hand-holding-box"></i></div>
+                    <div class="feature-info">
+                        <h3>Free Shipping</h3>
+                        <p>Order over $150</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-info">
+                        <h3>24/7 Support</h3>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <h2 class="footer-logo">Furniro.</h2>
+                <address class="footer-address">
+                    400 University Drive Suite 200 Coral<br>Gables,<br>FL 33134 USA
+                </address>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./product-detail.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Help</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-col">
+                <h4 class="footer-heading">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <div class="input-wrapper">
+                        <input type="email" id="newsletterEmail" placeholder="Enter Your Email Address" required>
+                        <span class="error-msg" id="newsletterError"></span>
+                    </div>
+                    <button type="submit" class="newsletter-submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2023 Furniro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Script JS -->
+    <script src="./comparison.js"></script>
+</body>
+</html>

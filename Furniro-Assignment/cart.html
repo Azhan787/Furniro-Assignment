@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Cart</title>
+    <!-- Google Fonts & Font Awesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./cart.css">
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <header class="header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="logo-img" onerror="this.remove();">
+                <span class="logo-text">Furniro</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link">Shop</a>
+                <a href="./product-detail.html" class="nav-link">About</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="userBtn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <a href="./cart.html" class="icon-btn active" id="cartBtn" aria-label="Shopping Cart" aria-current="page">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                </a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Mobile Menu" aria-expanded="false" aria-controls="mobileNav">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <!-- Mobile Menu -->
+        <nav class="mobile-nav" id="mobileNav" aria-label="Mobile Navigation" aria-hidden="true">
+            <a href="./index.html" class="mobile-nav-link">Home</a>
+            <a href="./shop.html" class="mobile-nav-link">Shop</a>
+            <a href="./product-detail.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+        <!-- HERO BANNER -->
+        <section class="cart-hero">
+            <div class="hero-content">
+                <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="hero-logo-img" onerror="this.remove();">
+                <h1 class="hero-title">Cart</h1>
+                <div class="breadcrumb">
+                    <a href="./index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">&gt;</span>
+                    <span class="breadcrumb-current">Cart</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- CART SECTION -->
+        <section class="cart-section">
+            <div class="container cart-container">
+
+                <!-- CART TABLE AREA -->
+                <div class="cart-table-wrapper">
+                    <div class="cart-table-scroll">
+                        <table class="cart-table" id="cartTable">
+                            <thead>
+                                <tr>
+                                    <th class="th-product">Product</th>
+                                    <th class="th-price">Price</th>
+                                    <th class="th-quantity">Quantity</th>
+                                    <th class="th-subtotal">Subtotal</th>
+                                    <th class="th-action"></th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="cart-item-row" id="cartRow">
+                                    <td class="td-product" data-label="Product">
+                                        <div class="product-info-cell">
+                                            <div class="product-img-box">
+                                                <img src="./images/pro3.png" alt="Asgaard sofa" class="cart-product-img">
+                                            </div>
+                                            <span class="product-title">Asgaard sofa</span>
+                                        </div>
+                                    </td>
+                                    <td class="td-price" data-label="Price">Rs. 250,000.00</td>
+                                    <td class="td-quantity" data-label="Quantity">
+                                        <input type="number" id="itemQuantity" class="quantity-input" value="1" min="1" aria-label="Quantity">
+                                    </td>
+                                    <td class="td-subtotal" data-label="Subtotal" id="itemSubtotal">Rs. 250,000.00</td>
+                                    <td class="td-action" data-label="">
+                                        <button type="button" class="delete-btn" id="deleteBtn" aria-label="Delete product">
+                                            <i class="fa-solid fa-trash"></i>
+                                        </button>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+
+                    <div class="empty-cart-msg hidden" id="emptyCartMsg">
+                        Your cart is currently empty.
+                    </div>
+                </div>
+
+                <!-- CART TOTALS CARD -->
+                <div class="cart-totals-card">
+                    <h2 class="totals-title">Cart Totals</h2>
+
+                    <div class="totals-row">
+                        <span class="totals-label">Subtotal</span>
+                        <span class="totals-value subtotal-val" id="summarySubtotal">Rs. 250,000.00</span>
+                    </div>
+
+                    <div class="totals-row total-row">
+                        <span class="totals-label">Total</span>
+                        <span class="totals-value total-val" id="summaryTotal">Rs. 250,000.00</span>
+                    </div>
+
+                    <a href="./checkout.html" class="btn-checkout">Check Out</a>
+                </div>
+
+            </div>
+        </section>
+
+        <!-- FEATURES SECTION -->
+        <section class="features-section">
+            <div class="container features-container">
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="feature-info">
+                        <h3>High Quality</h3>
+                        <p>Crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="feature-info">
+                        <h3>Warranty Protection</h3>
+                        <p>Over 2 years</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-box-open"></i></div>
+                    <div class="feature-info">
+                        <h3>Free Shipping</h3>
+                        <p>Order over $150</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-info">
+                        <h3>24/7 Support</h3>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col">
+                <h2 class="footer-logo">Furniro.</h2>
+                <address class="footer-address">
+                    400 University Drive Suite 200 Coral<br>Gables,<br>FL 33134 USA
+                </address>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./product-detail.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Help</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <div class="input-wrapper">
+                        <input type="email" id="newsletterEmail" placeholder="Enter Your Email Address" required>
+                        <span class="error-msg" id="newsletterError"></span>
+                    </div>
+                    <button type="submit" class="newsletter-submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>&copy; 2023 Furniro. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="./cart.js"></script>
+</body>
+</html>

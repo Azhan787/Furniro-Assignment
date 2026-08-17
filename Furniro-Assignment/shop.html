@@ -1,0 +1,548 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Furniro - Shop</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="./shop.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="container navbar-container">
+            <a href="index.html" class="logo">
+                <img src="./images/Meubel House_Logos-05 (1).png" alt="Furniro Logo" class="logo-img">
+                <span class="logo-text">Furniro</span>
+            </a>
+
+            <nav class="desktop-nav" aria-label="Main Navigation">
+                <a href="./index.html" class="nav-link">Home</a>
+                <a href="./shop.html" class="nav-link active">Shop</a>
+                <a href="./product-detail.html" class="nav-link">About</a>
+                <a href="./contact.html" class="nav-link">Contact</a>
+            </nav>
+
+            <div class="nav-icons">
+                <button class="icon-btn" id="userBtn" aria-label="Account"><i class="fa-regular fa-user"></i></button>
+                <button class="icon-btn" id="searchBtn" aria-label="Search"><i class="fa-solid fa-magnifying-glass"></i></button>
+                <button class="icon-btn" id="wishlistBtn" aria-label="Wishlist"><i class="fa-regular fa-heart"></i></button>
+                <a href="./cart.html" class="icon-btn" id="cartBtn" aria-label="Shopping Cart">
+                    <i class="fa-solid fa-cart-shopping"></i>
+                    <span class="cart-count" id="cartCount">0</span>
+                </a>
+                <button class="hamburger" id="hamburgerBtn" aria-label="Toggle Mobile Menu" aria-expanded="false">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </div>
+
+        <div class="mobile-nav" id="mobileNav" aria-hidden="true">
+            <a href="./index.html" class="mobile-nav-link">Home</a>
+            <a href="./shop.html" class="mobile-nav-link active">Shop</a>
+            <a href="./product-detail.html" class="mobile-nav-link">About</a>
+            <a href="./contact.html" class="mobile-nav-link">Contact</a>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-banner">
+            <img src="./images/shop.png" alt="Shop Banner" class="hero-bg-img">
+            <div class="hero-overlay"></div>
+            <div class="hero-content">
+                <h1 class="hero-title">Shop</h1>
+                <div class="breadcrumb">
+                    <a href="./index.html" class="breadcrumb-link">Home</a>
+                    <span class="breadcrumb-separator">&gt;</span>
+                    <span class="breadcrumb-current">Shop</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="filter-bar">
+            <div class="container filter-container">
+                <div class="filter-left">
+                    <button class="filter-btn" id="filterToggleBtn">
+                        <i class="fa-solid fa-sliders"></i>
+                        <span>Filter</span>
+                    </button>
+                    <div class="view-icons">
+                        <button class="view-btn active" aria-label="Grid View"><i class="fa-solid fa-border-all"></i></button>
+                        <button class="view-btn" aria-label="List View"><i class="fa-solid fa-list-ul"></i></button>
+                    </div>
+                    <span class="filter-divider">|</span>
+                    <p class="results-count">Showing 1–16 of 32 results</p>
+                </div>
+
+                <div class="filter-right">
+                    <div class="control-group">
+                        <label for="showCount">Show</label>
+                        <input type="number" id="showCount" class="show-input" value="16" readonly>
+                    </div>
+                    <div class="control-group">
+                        <label for="sortBy">Sort by</label>
+                        <select id="sortBy" class="sort-select">
+                            <option value="default">Default</option>
+                            <option value="price-low">Price: Low to High</option>
+                            <option value="price-high">Price: High to Low</option>
+                            <option value="newest">Newest</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="products-section">
+            <div class="container">
+                <div class="cart-toast" id="cartToast">Product added to cart</div>
+
+                <div class="product-grid">
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart1.png" alt="Syltherine" class="product-img">
+                            <span class="badge badge-discount">-30%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Syltherine</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                                <span class="product-old-price">Rp 3.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart2.jpg" alt="Leviosa" class="product-img">
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Leviosa</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart3.png" alt="Lolito" class="product-img">
+                            <span class="badge badge-discount">-50%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lolito</h3>
+                            <p class="product-description">Luxury big sofa</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 7.000.000</span>
+                                <span class="product-old-price">Rp 14.000.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart4.png" alt="Respira" class="product-img">
+                            <span class="badge badge-new">New</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Respira</h3>
+                            <p class="product-description">Outdoor bar table and stool</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart5.png" alt="Syltherine" class="product-img">
+                            <span class="badge badge-discount">-30%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Syltherine</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                                <span class="product-old-price">Rp 3.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart6.png" alt="Leviosa" class="product-img">
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Leviosa</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart7.png" alt="Lolito" class="product-img">
+                            <span class="badge badge-discount">-50%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lolito</h3>
+                            <p class="product-description">Luxury big sofa</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 7.000.000</span>
+                                <span class="product-old-price">Rp 14.000.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart8.png" alt="Respira" class="product-img">
+                            <span class="badge badge-new">New</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Respira</h3>
+                            <p class="product-description">Outdoor bar table and stool</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart5.png" alt="Syltherine" class="product-img">
+                            <span class="badge badge-discount">-30%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Syltherine</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                                <span class="product-old-price">Rp 3.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart6.png" alt="Leviosa" class="product-img">
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Leviosa</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart7.png" alt="Lolito" class="product-img">
+                            <span class="badge badge-discount">-50%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lolito</h3>
+                            <p class="product-description">Luxury big sofa</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 7.000.000</span>
+                                <span class="product-old-price">Rp 14.000.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart8.png" alt="Respira" class="product-img">
+                            <span class="badge badge-new">New</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Respira</h3>
+                            <p class="product-description">Outdoor bar table and stool</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart5.png" alt="Syltherine" class="product-img">
+                            <span class="badge badge-discount">-30%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Syltherine</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                                <span class="product-old-price">Rp 3.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart6.png" alt="Leviosa" class="product-img">
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Leviosa</h3>
+                            <p class="product-description">Stylish cafe chair</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 2.500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart7.png" alt="Lolito" class="product-img">
+                            <span class="badge badge-discount">-50%</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Lolito</h3>
+                            <p class="product-description">Luxury big sofa</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 7.000.000</span>
+                                <span class="product-old-price">Rp 14.000.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="product-card">
+                        <div class="product-image-container">
+                            <img src="./images/cart8.png" alt="Respira" class="product-img">
+                            <span class="badge badge-new">New</span>
+                            <div class="product-overlay">
+                                <button class="btn-add-to-cart">Add to cart</button>
+                                <div class="overlay-actions">
+                                    <button class="action-btn"><i class="fa-solid fa-share-nodes"></i> Share</button>
+                                    <button class="action-btn"><i class="fa-solid fa-right-left"></i> Compare</button>
+                                    <button class="action-btn"><i class="fa-regular fa-heart"></i> Like</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="product-info">
+                            <h3 class="product-name">Respira</h3>
+                            <p class="product-description">Outdoor bar table and stool</p>
+                            <div class="product-price-wrapper">
+                                <span class="product-price">Rp 500.000</span>
+                            </div>
+                        </div>
+                    </article>
+
+                </div>
+
+                <div class="pagination">
+                    <button class="page-btn active">1</button>
+                    <button class="page-btn">2</button>
+                    <button class="page-btn">3</button>
+                    <button class="page-btn page-btn-next">Next</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="features-section">
+            <div class="container features-container">
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-trophy"></i></div>
+                    <div class="feature-info">
+                        <h3>High Quality</h3>
+                        <p>crafted from top materials</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-circle-check"></i></div>
+                    <div class="feature-info">
+                        <h3>Warranty Protection</h3>
+                        <p>Over 2 years</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-hand-holding-box"></i></div>
+                    <div class="feature-info">
+                        <h3>Free Shipping</h3>
+                        <p>Order over 150 $</p>
+                    </div>
+                </div>
+                <div class="feature-box">
+                    <div class="feature-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="feature-info">
+                        <h3>24 / 7 Support</h3>
+                        <p>Dedicated support</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-container">
+            <div class="footer-col brand-col">
+                <h2 class="footer-logo">Furniro.</h2>
+                <address class="footer-address">
+                    400 University Drive Suite 200 Coral<br>Gables,<br>FL 33134 USA
+                </address>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Links</h4>
+                <ul class="footer-links">
+                    <li><a href="./index.html">Home</a></li>
+                    <li><a href="./shop.html">Shop</a></li>
+                    <li><a href="./product-detail.html">About</a></li>
+                    <li><a href="./contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4 class="footer-heading">Help</h4>
+                <ul class="footer-links">
+                    <li><a href="#">Payment Options</a></li>
+                    <li><a href="#">Returns</a></li>
+                    <li><a href="#">Privacy Policies</a></li>
+                </ul>
+            </div>
+            <div class="footer-col newsletter-col">
+                <h4 class="footer-heading">Newsletter</h4>
+                <form class="newsletter-form" id="newsletterForm" novalidate>
+                    <div class="input-wrapper">
+                        <input type="email" id="newsletterEmail" placeholder="Enter Your Email Address" required>
+                        <span class="error-msg" id="newsletterError"></span>
+                    </div>
+                    <button type="submit" class="newsletter-submit">SUBSCRIBE</button>
+                </form>
+            </div>
+        </div>
+        <div class="container footer-bottom">
+            <p>2023 furniro. All rights reserved</p>
+        </div>
+    </footer>
+
+    <script src="./shop.js"></script>
+</body>
+</html>
